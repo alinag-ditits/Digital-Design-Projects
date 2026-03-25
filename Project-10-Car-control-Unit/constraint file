@@ -1,1 +1,65 @@
+## Clock signal
+set_property -dict { PACKAGE_PIN W5 IOSTANDARD LVCMOS33 } [get_ports
+clk]
+create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5}
+[get_ports clk]
+## Reset Button (BTN0)
 
+set_property -dict { PACKAGE_PIN U18 IOSTANDARD LVCMOS33 }
+[get_ports rst]
+## Inputs
+# leading_distance[0] to leading_distance[6]
+set_property -dict { PACKAGE_PIN V17 IOSTANDARD LVCMOS33 }
+[get_ports {leading_distance[0]}]
+set_property -dict { PACKAGE_PIN V16 IOSTANDARD LVCMOS33 }
+[get_ports {leading_distance[1]}]
+set_property -dict { PACKAGE_PIN W16 IOSTANDARD LVCMOS33 }
+[get_ports {leading_distance[2]}]
+set_property -dict { PACKAGE_PIN W17 IOSTANDARD LVCMOS33 }
+[get_ports {leading_distance[3]}]
+set_property -dict { PACKAGE_PIN W15 IOSTANDARD LVCMOS33 }
+[get_ports {leading_distance[4]}]
+set_property -dict { PACKAGE_PIN V15 IOSTANDARD LVCMOS33 }
+[get_ports {leading_distance[5]}]
+set_property -dict { PACKAGE_PIN W14 IOSTANDARD LVCMOS33 }
+[get_ports {leading_distance[6]}]
+# car_speed[0] to car_speed[7]
+set_property -dict { PACKAGE_PIN W13 IOSTANDARD LVCMOS33 }
+[get_ports {car_speed[0]}]
+set_property -dict { PACKAGE_PIN V2 IOSTANDARD LVCMOS33 }
+[get_ports {car_speed[1]}]
+set_property -dict { PACKAGE_PIN T3 IOSTANDARD LVCMOS33 }
+[get_ports {car_speed[2]}]
+set_property -dict { PACKAGE_PIN T2 IOSTANDARD LVCMOS33 }
+[get_ports {car_speed[3]}]
+set_property -dict { PACKAGE_PIN R3 IOSTANDARD LVCMOS33 }
+[get_ports {car_speed[4]}]
+set_property -dict { PACKAGE_PIN W2 IOSTANDARD LVCMOS33 }
+[get_ports {car_speed[5]}]
+set_property -dict { PACKAGE_PIN U1 IOSTANDARD LVCMOS33 }
+[get_ports {car_speed[6]}]
+set_property -dict { PACKAGE_PIN T1 IOSTANDARD LVCMOS33 }
+[get_ports {car_speed[7]}]
+
+# speed_limit[0] to speed_limit[7]
+set_property -dict { PACKAGE_PIN R2 IOSTANDARD LVCMOS33 }
+[get_ports {speed_limit[0]}]
+set_property -dict { PACKAGE_PIN A14 IOSTANDARD LVCMOS33 }
+[get_ports {speed_limit[1]}]
+set_property -dict { PACKAGE_PIN A16 IOSTANDARD LVCMOS33 }
+[get_ports {speed_limit[2]}]
+set_property -dict { PACKAGE_PIN B15 IOSTANDARD LVCMOS33 }
+[get_ports {speed_limit[3]}]
+set_property -dict { PACKAGE_PIN B16 IOSTANDARD LVCMOS33 }
+[get_ports {speed_limit[4]}]
+set_property -dict { PACKAGE_PIN A15 IOSTANDARD LVCMOS33 }
+[get_ports {speed_limit[5]}]
+set_property -dict { PACKAGE_PIN A17 IOSTANDARD LVCMOS33 }
+[get_ports {speed_limit[6]}]
+set_property -dict { PACKAGE_PIN C15 IOSTANDARD LVCMOS33 }
+[get_ports {speed_limit[7]}]
+## Outputs
+set_property -dict { PACKAGE_PIN U16 IOSTANDARD LVCMOS33 }
+[get_ports unlock_doors]
+set_property -dict { PACKAGE_PIN E19 IOSTANDARD LVCMOS33 }
+[get_ports accelerate_car]
